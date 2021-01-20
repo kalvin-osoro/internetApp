@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- <img src="images/avatar.png" alt="" class="avatar" /> -->
+        <h1>sign up</h1>
+  
+        <form action="includes/signup.inc.php" method="POST" class="contact-form">
+          <div class="input-fields">
+           
+            <input
+              type="text"
+              id="name"
+              name="user_name"
+              class="input"
+              placeholder="username"
+            /><br/><br/>
+
+            
+            <input
+              type="email"
+              id="mail"
+              name="user_email"
+              class="input"
+              placeholder="email"
+            /><br/><br/>
+
+            <input
+            type="text"
+            id="res"
+            name="residence"
+            class="input"
+            placeholder="City of residence"
+          /><br/><br/>
+  
+           
+            
+            <input
+              type="password"
+              id="password"
+              name="user_password"
+              class="input"
+              placeholder="password"
+            /><br/><br/>
+  
+            
+            <input
+              type="password"
+              id="c-password"
+              name="confirmpassword"
+              class="input"
+              placeholder="Confirm password"
+            /><br/><br/>
+  
+            
+            <button type="submit" name="register" class="btn" >Sign Up</button>
+            <!-- <input type="submit" name="register" value="REGISTER"> -->
+  
+            <p>
+              already a member?
+              <span><a href="login.html" id="spn">login</a></span>
+            </p>
+          </div>
+        </form>
+      </div>
+</body>
+</html>

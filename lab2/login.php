@@ -15,9 +15,10 @@ require_once("includes/processLogin.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login page</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>   
     <link rel="stylesheet" href="css/style.css">
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>   
+    <script src="js/login.js"></script>
+
 </head>
 
 <body>
@@ -50,42 +51,7 @@ require_once("includes/processLogin.php");
         </form>
     </div><br><br>
     <!--end of main content-->
-    <script>
-$(document).ready(function() {
-	
-	
-	$('#btnlogin').on('click', function() {
-		var username = $('#name_log').val();
-		var password = $('#password_log').val();
-		if(username!="" && password!="" ){
-			$.ajax({
-				url: "includes/user.php",
-				type: "POST",
-				data: {
-					type:2,
-					email: email,
-					password: password						
-				},
-				cache: false,
-				success: function(dataResult){
-					var dataResult = JSON.parse(dataResult);
-					if(dataResult.statusCode==200){
-						location.href = "home.php";						
-					}
-					else if(dataResult.statusCode==201){
-						$("#error").show();
-						$('#error').html('Invalid username or Password !');
-					}
-					
-				}
-			});
-		}
-		else{
-			alert('Please fill all the field !');
-		}
-	});
-});
-</script>
+   
 
 </body>
 

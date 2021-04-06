@@ -6,7 +6,7 @@ $(document).ready(function() {
         var formData = frm.serialize();
         formData += '&' + $('#submit_btn').attr('name') + '=' + $('#submit_btn').attr('value');
         $.ajax({
-            type: frm.attr('method'),
+            type: frm.attr('method'),            
             url: frm.attr('action'),
             data: formData,
             success: function(data){

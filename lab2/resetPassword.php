@@ -24,7 +24,7 @@ require_once("includes/passwordreset.php");
 
     <div class="container">
 
-        <form style="margin-top: 20px;" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="$_POST" id="form">
+        <form name="resetform" style="margin-top: 20px;" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="$_POST" id="form">
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="Enter current password" name="currentPassword">
             </div>
@@ -42,7 +42,7 @@ require_once("includes/passwordreset.php");
                 </label>
                 <span style="float: right;"><a href="#"> Already have an account? </a></span>
               </div> -->
-            <button type="submit" class="btn btn-primary" name="changePassword">submit</button>
+            <button type="submit" class="btn btn-primary" name="changePassword" id="submit_btn">submit</button>
             <p><?php echo '<label  class="text-danger">' . $error . '</label>'; ?></p>
             <p><?php echo '<label  class="alert alert-success">' . $success . '</label>'; ?></p>
         </form>
